@@ -19,6 +19,23 @@ body {
   color: var(--text);
 }
 
+/* HERO LOGO BANNER */
+.hero-banner {
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-banner img {
+  max-width: 320px;
+  width: 80%;
+  height: auto;
+}
+
 /* HEADER */
 header {
   display: flex;
