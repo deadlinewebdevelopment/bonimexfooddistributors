@@ -4,6 +4,8 @@
   --text: #1f2937;
   --muted: #6b7280;
   --accent: #2f6f4e;
+  --accent-dark: #1f4f37;
+  --red: #c91f1f;
   --border: #e5e7eb;
 }
 
@@ -20,9 +22,7 @@ body {
   line-height: 1.6;
 }
 
-/* =======================
-   HERO LOGO BANNER
-======================= */
+/* HERO LOGO BANNER */
 .hero-banner {
   width: 100%;
   background: white;
@@ -40,9 +40,7 @@ body {
   object-fit: contain;
 }
 
-/* =======================
-   HEADER / NAV
-======================= */
+/* HEADER / NAV */
 header {
   display: flex;
   justify-content: center;
@@ -70,7 +68,6 @@ nav a:hover {
   color: var(--accent);
 }
 
-/* subtle underline animation */
 nav a::after {
   content: "";
   position: absolute;
@@ -86,9 +83,7 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* =======================
-   HERO SECTION
-======================= */
+/* HERO SECTION */
 .hero {
   padding: 80px 40px;
   text-align: center;
@@ -123,9 +118,7 @@ nav a:hover::after {
   transform: translateY(-2px);
 }
 
-/* =======================
-   PRODUCTS SECTION
-======================= */
+/* PRODUCTS SECTION */
 .products {
   padding: 50px 40px;
 }
@@ -166,9 +159,7 @@ nav a:hover::after {
   font-weight: bold;
 }
 
-/* =======================
-   ABOUT SECTION
-======================= */
+/* ABOUT SECTION */
 .about {
   padding: 50px 40px;
   background: #ffffff;
@@ -184,25 +175,116 @@ nav a:hover::after {
   max-width: 800px;
 }
 
-/* =======================
-   CONTACT SECTION
-======================= */
+/* CONTACT SECTION */
 .contact {
-  padding: 50px 40px;
+  padding: 70px 40px;
+  background:
+    radial-gradient(circle at top left, rgba(47, 111, 78, 0.18), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(201, 31, 31, 0.12), transparent 35%),
+    #0f172a;
+}
+
+.contact-card {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 2px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(47, 111, 78, 0.95), rgba(201, 31, 31, 0.8));
+  box-shadow: 0 25px 60px rgba(0,0,0,0.22);
+}
+
+.contact-content {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 22px;
+  padding: 45px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-content::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: -80px;
+  top: -80px;
+  border-radius: 50%;
+  background: rgba(47, 111, 78, 0.08);
+}
+
+.eyebrow {
+  color: var(--red);
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
 .contact h2 {
-  margin-bottom: 10px;
+  font-size: 34px;
+  margin-bottom: 12px;
+  position: relative;
 }
 
-.contact p {
+.contact-text {
   color: var(--muted);
-  margin-top: 5px;
+  max-width: 620px;
+  margin: 0 auto 28px;
+  position: relative;
 }
 
-/* =======================
-   FOOTER
-======================= */
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.contact-button {
+  text-decoration: none;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.25s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.email-button {
+  background: var(--accent);
+  color: white;
+}
+
+.phone-button {
+  background: var(--red);
+  color: white;
+}
+
+.contact-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 28px rgba(0,0,0,0.15);
+}
+
+.contact-details {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  color: var(--muted);
+  position: relative;
+}
+
+.contact-details p {
+  margin-top: 6px;
+}
+
+.contact-details strong {
+  color: var(--text);
+}
+
+/* FOOTER */
 footer {
   text-align: center;
   padding: 30px;
@@ -212,9 +294,7 @@ footer {
   background: #fff;
 }
 
-/* =======================
-   RESPONSIVE
-======================= */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 32px;
@@ -229,8 +309,27 @@ footer {
   }
 
   .products,
-  .about,
-  .contact {
+  .about {
     padding: 40px 20px;
+  }
+
+  .contact {
+    padding: 50px 20px;
+  }
+
+  .contact-content {
+    padding: 35px 22px;
+  }
+
+  .contact h2 {
+    font-size: 28px;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+  }
+
+  .contact-button {
+    width: 100%;
   }
 }
