@@ -1,108 +1,160 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bonimex Food Distributors</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
+:root {
+  --bg: #f7f6f2;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #2f6f4e;
+  --accent-dark: #1f4f37;
+  --red: #c91f1f;
+  --border: #e5e7eb;
+}
 
-<body>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-<section class="hero-banner">
-  <img src="images/Bonimexlogo.png" alt="Bonimex Logo">
-</section>
+body {
+  background: var(--bg);
+  color: var(--text);
+}
 
-<header>
-  <nav class="nav-center">
-    <a href="#">Shop</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+/* HERO */
+.hero-banner {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+}
 
-<section class="hero">
-  <h1>Fresh Produce. Reliable Distribution.</h1>
-  <p>
-    Serving restaurants, markets, and businesses with high-quality produce and dependable delivery.
-  </p>
-  <button class="cta">View Products</button>
-</section>
+.hero-banner img {
+  max-width: 320px;
+}
 
-<section class="products">
-  <h2>Featured Produce</h2>
+/* NAV */
+header {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
 
-  <div class="grid">
+.nav-center {
+  display: flex;
+  gap: 25px;
+}
 
-    <div class="card">
-      <img src="images/tomatoes.jpg" alt="Tomatoes" class="product-img">
-      <h3>Tomatoes</h3>
-      <p class="price">$2.30 / lb</p>
-    </div>
+nav a {
+  text-decoration: none;
+  color: var(--text);
+}
 
-    <div class="card">
-      <img src="images/onions.jpg" alt="Onions" class="product-img">
-      <h3>Onions</h3>
-      <p class="price">$1.10 / lb</p>
-    </div>
+nav a:hover {
+  color: var(--accent);
+}
 
-    <div class="card">
-      <img src="images/lettuce.jpg" alt="Lettuce" class="product-img">
-      <h3>Lettuce</h3>
-      <p class="price">$1.75 / unit</p>
-    </div>
+/* HERO TEXT */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
 
-    <div class="card">
-      <img src="images/peppers.jpg" alt="Peppers" class="product-img">
-      <h3>Peppers</h3>
-      <p class="price">$3.20 / lb</p>
-    </div>
+.hero h1 {
+  font-size: 36px;
+}
 
-  </div>
-</section>
+.cta {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+}
 
-<section id="about" class="about">
-  <h2>About Bonimex</h2>
-  <p>
-    Founded in 2001, Bonimex Food Distributors is built on a story of hard work, family, and growth.
-    The owner came to the United States from Mexico in 1991 as a young man, working alongside his brothers.
-  </p>
-  <p>
-    What began with a single car grew into a van, then a larger vehicle, and eventually a full-size truck.
-    Today, Bonimex continues to deliver quality produce with pride and reliability.
-  </p>
-</section>
+/* PRODUCTS */
+.products {
+  padding: 40px;
+}
 
-<section id="contact" class="contact">
-  <div class="contact-card">
-    <div class="contact-content">
-      <p class="eyebrow">Get in Touch</p>
-      <h2>Ready to Order Fresh Produce?</h2>
-      <p class="contact-text">
-        Contact Bonimex Produce for availability, pricing, delivery questions, or wholesale inquiries.
-      </p>
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
 
-      <div class="contact-actions">
-        <a class="contact-button email-button" href="mailto:bonamexproduce@hotmail.com">
-          ✉ Email Bonimex
-        </a>
+.card {
+  background: var(--card);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: 0.2s;
+}
 
-        <a class="contact-button phone-button" href="tel:17184247707">
-          ☎ Call (718) 424-7707
-        </a>
-      </div>
+.card:hover {
+  transform: translateY(-5px);
+}
 
-      <div class="contact-details">
-        <p><strong>Email:</strong> bonamexproduce@hotmail.com</p>
-        <p><strong>Telephone:</strong> (718) 424-7707</p>
-      </div>
-    </div>
-  </div>
-</section>
+.product-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
-<footer>
-  <p>© 2026 Bonimex Food Distributors</p>
-</footer>
+.price {
+  color: var(--accent);
+  font-weight: bold;
+}
 
-</body>
-</html>
+/* ABOUT */
+.about {
+  padding: 40px;
+  background: #fff;
+}
+
+/* CONTACT */
+.contact {
+  padding: 60px 20px;
+  background: #111827;
+}
+
+.contact-card {
+  max-width: 800px;
+  margin: auto;
+  padding: 2px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, green, red);
+}
+
+.contact-content {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-button {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  color: white;
+  text-decoration: none;
+}
+
+.email-button {
+  background: green;
+}
+
+.phone-button {
+  background: red;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+}
