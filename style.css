@@ -19,113 +19,64 @@
 body {
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
 }
 
-/* HERO LOGO BANNER */
+/* HERO */
 .hero-banner {
-  width: 100%;
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 25px 10px;
-  border-bottom: 1px solid var(--border);
+  text-align: center;
+  padding: 20px;
+  background: #fff;
 }
 
 .hero-banner img {
-  max-width: 340px;
-  width: 80%;
-  height: auto;
-  object-fit: contain;
+  max-width: 320px;
 }
 
-/* HEADER / NAV */
+/* NAV */
 header {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 18px 40px;
-  background: var(--card);
+  padding: 15px;
+  background: #fff;
   border-bottom: 1px solid var(--border);
 }
 
 .nav-center {
   display: flex;
-  gap: 28px;
+  gap: 25px;
 }
 
 nav a {
   text-decoration: none;
   color: var(--text);
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  transition: 0.2s ease;
-  position: relative;
 }
 
 nav a:hover {
   color: var(--accent);
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 2px;
-  background: var(--accent);
-  transition: 0.2s ease;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-/* HERO SECTION */
+/* HERO TEXT */
 .hero {
-  padding: 80px 40px;
   text-align: center;
+  padding: 60px 20px;
 }
 
 .hero h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  color: var(--muted);
-  margin-bottom: 20px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 36px;
 }
 
 .cta {
+  margin-top: 15px;
+  padding: 10px 20px;
   background: var(--accent);
-  color: white;
-  padding: 12px 22px;
+  color: #fff;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: 0.2s ease;
+  border-radius: 6px;
 }
 
-.cta:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-/* PRODUCTS SECTION */
+/* PRODUCTS */
 .products {
-  padding: 50px 40px;
-}
-
-.products h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
+  padding: 40px;
 }
 
 .grid {
@@ -139,19 +90,18 @@ nav a:hover::after {
   padding: 15px;
   border-radius: 12px;
   border: 1px solid var(--border);
-  transition: 0.25s ease;
+  transition: 0.2s;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transform: translateY(-5px);
 }
 
-.img {
+.product-img {
+  width: 100%;
   height: 140px;
-  background: #d1d5db;
+  object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 10px;
 }
 
 .price {
@@ -159,177 +109,52 @@ nav a:hover::after {
   font-weight: bold;
 }
 
-/* ABOUT SECTION */
+/* ABOUT */
 .about {
-  padding: 50px 40px;
-  background: #ffffff;
+  padding: 40px;
+  background: #fff;
 }
 
-.about h2 {
-  margin-bottom: 10px;
-}
-
-.about p {
-  margin-top: 10px;
-  color: var(--muted);
-  max-width: 800px;
-}
-
-/* CONTACT SECTION */
+/* CONTACT */
 .contact {
-  padding: 70px 40px;
-  background:
-    radial-gradient(circle at top left, rgba(47, 111, 78, 0.18), transparent 35%),
-    radial-gradient(circle at bottom right, rgba(201, 31, 31, 0.12), transparent 35%),
-    #0f172a;
+  padding: 60px 20px;
+  background: #111827;
 }
 
 .contact-card {
-  max-width: 950px;
-  margin: 0 auto;
+  max-width: 800px;
+  margin: auto;
   padding: 2px;
-  border-radius: 24px;
-  background: linear-gradient(135deg, rgba(47, 111, 78, 0.95), rgba(201, 31, 31, 0.8));
-  box-shadow: 0 25px 60px rgba(0,0,0,0.22);
+  border-radius: 20px;
+  background: linear-gradient(135deg, green, red);
 }
 
 .contact-content {
-  background: rgba(255, 255, 255, 0.96);
-  border-radius: 22px;
-  padding: 45px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
   text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.contact-content::before {
-  content: "";
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  right: -80px;
-  top: -80px;
-  border-radius: 50%;
-  background: rgba(47, 111, 78, 0.08);
-}
-
-.eyebrow {
-  color: var(--red);
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 2px;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.contact h2 {
-  font-size: 34px;
-  margin-bottom: 12px;
-  position: relative;
-}
-
-.contact-text {
-  color: var(--muted);
-  max-width: 620px;
-  margin: 0 auto 28px;
-  position: relative;
-}
-
-.contact-actions {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 25px;
-  position: relative;
 }
 
 .contact-button {
-  text-decoration: none;
-  padding: 14px 22px;
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
   border-radius: 999px;
-  font-weight: bold;
-  font-size: 15px;
-  transition: 0.25s ease;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  color: white;
+  text-decoration: none;
 }
 
 .email-button {
-  background: var(--accent);
-  color: white;
+  background: green;
 }
 
 .phone-button {
-  background: var(--red);
-  color: white;
-}
-
-.contact-button:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 28px rgba(0,0,0,0.15);
-}
-
-.contact-details {
-  border-top: 1px solid var(--border);
-  padding-top: 20px;
-  color: var(--muted);
-  position: relative;
-}
-
-.contact-details p {
-  margin-top: 6px;
-}
-
-.contact-details strong {
-  color: var(--text);
+  background: red;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 30px;
-  color: var(--muted);
-  font-size: 13px;
-  border-top: 1px solid var(--border);
-  background: #fff;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  header {
-    padding: 15px 20px;
-  }
-
-  .hero {
-    padding: 60px 20px;
-  }
-
-  .products,
-  .about {
-    padding: 40px 20px;
-  }
-
-  .contact {
-    padding: 50px 20px;
-  }
-
-  .contact-content {
-    padding: 35px 22px;
-  }
-
-  .contact h2 {
-    font-size: 28px;
-  }
-
-  .contact-actions {
-    flex-direction: column;
-  }
-
-  .contact-button {
-    width: 100%;
-  }
+  padding: 20px;
 }
